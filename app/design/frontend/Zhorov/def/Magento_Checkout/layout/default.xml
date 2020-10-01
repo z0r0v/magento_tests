@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+
+    <container name="box.icon" htmlTag="div" htmlClass="box-icon" after="logo"></container>
+    	<block class="Magento\Cms\Block\Block" name="header.link.custom">
+    							<arguments>
+    								<argument name="block_id" xsi:type="string">header_link_custom</argument>
+    							</arguments>
+     </block>
+    <move element="box.icon" destination="header-wrapper" after="logo"/>
+    <move element="minicart" destination="box.icon" before="-"/>
+    <move element="header.link.custom" destination="box.icon" after="minicart"/>
+  </body>
+</page>
